@@ -1,0 +1,174 @@
+/* ========================================
+   DASHBOARD SYSTEM - STYLE LENGKAP 2025
+   Index + Login + Register + Admin Panel
+======================================== */
+
+/* BASE & RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* CONTAINER */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* HEADER - INDEX */
+header {
+    background: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky; top: 0; z-index: 100;
+}
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo {
+    font-size: 1.75rem; font-weight: 800; color: #f97316;
+    text-decoration: none;
+}
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a {
+    color: #64748b; text-decoration: none; font-weight: 500;
+    padding: 0.5rem 1rem; border-radius: 8px; transition: 0.3s;
+}
+.nav-links a:hover { background: #fef3c7; color: #f97316; }
+
+/* INDEX - TAB NAVIGATION */
+.tab-nav {
+    display: flex; background: white; border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin: 3rem 0;
+    overflow: hidden;
+}
+.tablink {
+    flex: 1; padding: 1.25rem; border: none; background: none;
+    font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: 0.3s;
+    color: #94a3b8;
+}
+.tablink:hover { background: #fef3c7; color: #f97316; }
+.tablink.active { background: #f97316; color: white; }
+.tabcontent {
+    display: none; background: white; padding: 2.5rem;
+    border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* INDEX - BERITA */
+.berita-item {
+    padding: 1.75rem; border-left: 4px solid #f97316;
+    margin-bottom: 1.5rem; background: #fff7ed;
+    border-radius: 8px; transition: 0.3s;
+}
+.berita-item:hover { background: #fed7aa; }
+.berita-item h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: #1e293b; }
+
+/* INDEX - KATALOG */
+.katalog-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem; margin-top: 1rem;
+}
+.katalog-item {
+    padding: 2rem; background: white; border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: 0.3s;
+}
+.katalog-item:hover {
+    transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.katalog-item h3 { color: #1e293b; font-weight: 700; margin-bottom: 1rem; }
+.katalog-item .harga { color: #059669; font-size: 1.5rem; font-weight: 800; }
+
+/* LOGIN & REGISTER */
+.login-form, .register-form {
+    max-width: 400px; margin: 4rem auto; padding: 0 1rem;
+}
+.login-form .card, .register-form .card {
+    background: white; padding: 2.5rem; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.login-form h2, .register-form h2 {
+    text-align: center; margin-bottom: 2rem; color: #1e293b;
+    font-weight: 700; font-size: 1.75rem;
+}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label {
+    display: block; margin-bottom: 0.5rem; font-weight: 600; color: #475569;
+}
+input[type="text"], input[type="password"], textarea {
+    width: 100%; padding: 0.875rem 1rem; border: 2px solid #e2e8f0;
+    border-radius: 8px; font-size: 1rem; transition: 0.3s;
+}
+input:focus { border-color: #f97316; outline: none; box-shadow: 0 0 0 3px rgba(249,115,22,0.1); }
+.btn {
+    width: 100%; padding: 1rem; background: #f97316; color: white;
+    border: none; border-radius: 8px; font-weight: 700; cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover { background: #ea580c; transform: translateY(-1px); }
+.message { 
+    padding: 1rem; margin-bottom: 1.5rem; border-radius: 8px; text-align: center;
+    font-weight: 600;
+}
+.message.error { background: #fee2e2; color: #dc2626; border: 1px solid #fecaca; }
+
+/* ADMIN SIDEBAR */
+.admin-sidebar {
+    width: 260px; height: 100vh; background: #1e293b;
+    position: fixed; left: 0; top: 0; z-index: 99; padding: 2rem 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+.sidebar-header {
+    padding: 0 1.5rem 1.5rem; color: white; border-bottom: 1px solid #334155;
+}
+.sidebar-title { font-size: 1.25rem; font-weight: 700; color: #f97316; }
+.sidebar-user { color: #94a3b8; margin-top: 0.25rem; }
+.sidebar-menu a {
+    display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem;
+    color: #cbd5e0; text-decoration: none; font-weight: 500; transition: 0.3s;
+}
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background: #f97316; color: white;
+}
+
+/* ADMIN MAIN */
+.admin-main { margin-left: 260px; padding: 2rem 0; min-height: 100vh; }
+.admin-header { margin-bottom: 2rem; }
+.admin-header h1 { font-size: 2rem; font-weight: 700; color: #1e293b; }
+
+/* ADMIN STATS */
+.stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; margin-bottom: 3rem;
+}
+.stat-card {
+    background: white; padding: 2rem; border-radius: 12px;
+    text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.stat-number { font-size: 2.5rem; font-weight: 800; color: #f97316; }
+
+/* TABLES - ADMIN CRUD */
+.table {
+    width: 100%; background: white; border-radius: 12px;
+    overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.table th {
+    background: #1e293b; color: white; padding: 1.25rem;
+    text-align: left; font-weight: 600; font-size: 0.875rem;
+}
+.table td { padding: 1.25rem; border-bottom: 1px solid #f1f5f9; }
+.table tr:hover { background: #f8fafc; }
+
+/* FORM ADMIN */
+.admin-form { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .admin-sidebar { transform: translateX(-100%); }
+    .admin-main { margin-left: 0; }
+}
+@media (max-width: 768px) {
+    .tab-nav { flex-direction: column; }
+    .katalog-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .login-form, .register-form { margin: 2rem 1rem; }
+}
