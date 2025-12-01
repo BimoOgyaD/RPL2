@@ -1,18 +1,23 @@
-MooHub - Lightweight CI4-like PHP project (runs on PHP 8.1)
-----------------------------------------------------------
-This project is a small, self-contained PHP app that mimics a CodeIgniter-like structure
-so you can run it directly in XAMPP without installing the full CodeIgniter 4 framework.
+MooHub - PHP Native project (runs on PHP 8.1)
+Projek website penyedia informasi sederhana 
 
-How to run (XAMPP):
-1. Extract moohub.zip into your XAMPP htdocs directory so you have: htdocs/moohub/
-2. Import database.sql into phpMyAdmin (or run in MySQL): 
-   - create database moohub_db and tables. The file database.sql is included.
-3. Ensure PHP 8.1 is selected in XAMPP.
-4. Open browser: http://localhost/moohub/public/
-5. Use the News menu to add/edit/delete news.
+Cara menjalankanya lewat (XAMPP):
+1. Ekstrak folder moohub.zip ke dalam folder htdocs di XAMPP sehingga path-nya menjadi htdocs/moohub/.
+2. Buat database baru di phpMyAdmin dengan nama moohub_db dan import file database.sql yang sudah disediakan.
+3. Pastikan PHP versi 8.1 aktif di XAMPP.
+4. Buka browser dan akses website melalui http://localhost/moohub/public/.
+5. Admin dapat menggunakan menu News untuk menambah, atau menghapus berita.
 
-Notes:
-- DB config is read from .env at project root. Edit DB credentials if necessary.
-- This is NOT the real CodeIgniter 4 framework. It's a minimal alternative that
-  provides a model layer (PDO-based) so controllers don't write raw SQL directly,
-  satisfying "ORM-like / less query" requirements for your ACT.
+Struktur Folder:
+1. css/ Berisi file style.css untuk styling seluruh halaman.
+2. admin/ Berisi halaman admin seperti login.php untuk login, register.php untuk daftar admin baru, dashboard.php untuk halaman utama admin, berita.php untuk CRUD berita, katalog.php untuk CRUD katalog, dan logout.php untuk keluar dari sesi admin.
+3. includes/ → Berisi template dan konfigurasi seperti header.php untuk bagian atas halaman, footer.php untuk bagian bawah, dan koneksi.php untuk pengaturan koneksi database menggunakan PDO.
+4. index.php → Halaman utama yang diakses publik untuk melihat informasi dan berita.
+
+Fitur:
+1. Pengunjung dapat melihat daftar berita dan detailnya tanpa harus login.
+2. Admin dapat login untuk mengelola seluruh konten: tambah, edit, dan hapus berita serta katalog.
+3. Dashboard admin sederhana dan mudah digunakan.
+4. Logout untuk mengakhiri sesi admin.
+
+Konfigurasi database ada di includes/koneksi.php.
