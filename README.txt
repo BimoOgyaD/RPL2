@@ -1,4 +1,4 @@
-MooHub - PHP Native project (runs on PHP 8.1)
+MooHub - PHP Native project (PHP 8.1)
 Projek website penyedia informasi sederhana 
 
 Cara menjalankanya lewat (XAMPP):
