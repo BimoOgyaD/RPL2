@@ -1,6 +1,6 @@
 MooHub - PHP Native project (PHP 8.1) Github lewat alamat URL : https://github.com/BimoOgyaD/RPL2
 
-Projek website penyedia informasi sederhana 
+Projek website penyedia informasi perusahaan sederhana 
 
 Cara menjalankanya lewat (XAMPP):
 1. Ekstrak folder git ini lalu bisa rename folder RPL2-master menjadi moohub, lalu di pindahkan ke dalam folder htdocs di XAMPP sehingga path-nya menjadi htdocs/moohub/.
