@@ -1,5 +1,4 @@
-MooHub - PHP Native project (PHP 8.1) Github lewat alamat URL : https://github.com/BimoOgyaD/RPL2
-
+MooHub - PHP Native project (PHP 8.1)
 Projek website penyedia informasi perusahaan sederhana 
 
 Cara menjalankanya lewat (XAMPP):
