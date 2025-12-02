@@ -3,8 +3,8 @@ MooHub - PHP Native project (PHP 8.1) Github lewat alamat URL : https://github.c
 Projek website penyedia informasi sederhana 
 
 Cara menjalankanya lewat (XAMPP):
-1. Ekstrak folder moohub.zip ke dalam folder htdocs di XAMPP sehingga path-nya menjadi htdocs/moohub/.
-2. Buat database baru di phpMyAdmin dengan nama moohub_db dan import file database.sql yang sudah disediakan.
+1. Ekstrak folder git ini lalu bisa rename folder RPL2-master menjadi moohub, lalu di pindahkan ke dalam folder htdocs di XAMPP sehingga path-nya menjadi htdocs/moohub/.
+2. Buat database baru di phpMyAdmin dengan nama moohub dan import file moohub.sql yang sudah disediakan.
 3. Pastikan PHP versi 8.1 aktif di XAMPP.
 4. Buka browser dan akses website melalui http://localhost/moohub/public/.
 5. Admin dapat menggunakan menu News untuk menambah, atau menghapus berita.
